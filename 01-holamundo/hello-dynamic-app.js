@@ -10,5 +10,6 @@ let stdin = process.openStdin();
     let name=d.toString().trim();
     console.log(`Hola ${name}`);
     process.exit();
+    //Se da por finalizado
   });
   
