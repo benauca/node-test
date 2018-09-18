@@ -51,7 +51,7 @@ let getUser = (idUser) => {
 }
 
 let getSalario = (user) => {
-    console.log('Buscando el salario....');
+    console.log('Buscando el salario....', user);
     return new Promise((resolve, reject) => {
         let salario = salarios.find(salario => salario.id === user.idUser);
         if (!salario)
@@ -69,6 +69,7 @@ let getSalario = (user) => {
 }
 
 // Recuperamos un usuario valido
+
 getUser(1).then(
     user => {
         console.log('Usuario recuperado ', user);
@@ -83,15 +84,31 @@ getUser(1).then(
 
 // Recuperamos un usuario que  no tiene sueldo asignado. 
 getUser(4).then(
-    user => {
-        console.log('Usuario recuperado ', user);
-        getSalario(user).then(
-            //En caso de tener una repuesta correcta.........
-            response => { console.log(response); },
-            //En caso  de tener un error 
-            error => { console.log(error); }
-        )
-    }, error => {
-        console.log(error);
-    }
-)
+        user => {
+            console.log('Usuario recuperado ', user);
+            getSalario(user).then(
+                //En caso de tener una repuesta correcta.........
+                response => { console.log(response); },
+                //En caso  de tener un error 
+                error => { console.log(error); }
+            )
+        }, error => {
+            console.log(error);
+        }
+    )
+    /** 
+     * Ejemplo de promesas encadenadas,
+     */
+getUser(2).then(
+        user => {
+            return getSalario(user);
+        })
+    //Tratamos el resultado de la promesa  getSalario.
+    .then(
+        response => {
+            console.log(response);
+        })
+    //capturamos los errores de cualquiera de las promesas encadenadas.
+    .catch(error => {
+        console.log('Error en la prueba de promesas encadenadas', error);
+    });

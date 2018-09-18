@@ -34,6 +34,12 @@
  */
 
 
- let getUser = async () => {
-     return 'Hola benauca..........';
+let getUser = async() => {
+    return 'Hola benauca..........';
 }
+
+getUser().then(
+    response => console.log('Esperamos la salida:' + response)
+).catch(
+    error => console.log('Error', e)
+);
