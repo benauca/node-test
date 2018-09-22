@@ -1,0 +1,15 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Una calculadora de consola",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@benauca",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.1.0",
+    "yargs": "^12.0.2"
+  }
+}
