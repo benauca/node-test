@@ -1,0 +1,15 @@
+{
+    "name": "3b-tasker",
+    "version": "1.0.0",
+    "description": "Ejemplo de un gestor de tareas basado en node y a través de la línea de comandos",
+    "main": "task.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "@benauca",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.3.2",
+        "yargs": "^12.0.2"
+    }
+}
