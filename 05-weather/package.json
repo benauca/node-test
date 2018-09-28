@@ -1,0 +1,15 @@
+{
+  "name": "33t-weather",
+  "version": "1.0.0",
+  "description": "Detalle del clima de una ciudad",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@benauca",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "yargs": "^12.0.2"
+  }
+}
