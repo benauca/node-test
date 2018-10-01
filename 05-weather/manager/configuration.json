@@ -1,6 +1,4 @@
 [{
-    //Google Api
-    "apikey": "${INSERT_API}",
-    //Open Weather Api
-    "openKey": "${INSERT_API}"
+    "apikey": "${INSERT_APIKey_For}",
+    "openKey": "${INSERT_APIKey_OpenWeather}"
 }]
