@@ -1,4 +1,6 @@
 [{
-    "apikey": "AIzaSyC2m-_GN_mgsqryj2Iub3InqmPTksiUG34",
-    "openKey": "14a098b08df7f856962052bc2e58965c"
+    //Google Api
+    "apikey": "${INSERT_API}",
+    //Open Weather Api
+    "openKey": "${INSERT_API}"
 }]
