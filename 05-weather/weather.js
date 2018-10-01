@@ -4,6 +4,7 @@
 const argv = require('./conf/util').argv;
 const axios = require('axios');
 const location = require('./manager/location');
+const weather = require('./manager/weather-manager');
 
 const direction = argv.location;
 
@@ -14,8 +15,14 @@ const direction = argv.location;
  *  - axios: basada en Promesas
  *  - Request: basada en Callback
  */
-console.log(`Recuperando Información Location:  ${location}`);
-location.getLocation(direction)
-    .then(response => {
-        console.log(response);
-    }).catch(e => console.log(e));
+const getInfo = async(direction) => {
+    try {
+        let coords = await location.getLocation(direction);
+        let temp = await weather.getWeather(coords.latitud, coords.longitud);
+        console.log(`La  temperatura en  ${direction} es de ${temp} ºC`);
+    } catch (error) {
+        console.log("Error", error);
+    }
+
+}
+getInfo(direction);
